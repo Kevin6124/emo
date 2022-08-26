@@ -25,6 +25,7 @@ class matsurisearch(cog_extension):
         #search_keywords = ["拉米" , "菈米" , "Lamy" , "LAMY" , "ラミィ"]
         ban_keywords = ["mmd" , "MMD" , "MikuMikuDance" , "提拉米蘇" , "提拉米苏"]
         video_list = []
+        await ctx.channel.send("開始搜尋")
         chrome = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
         chrome.get("https://www.youtube.com/")
         WebDriverWait(chrome,10,0.2).until(EC.presence_of_element_located((By.XPATH, ("/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input") )))

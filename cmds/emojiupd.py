@@ -40,6 +40,7 @@ class emojiupd(cog_extension):
         h.write("\n")
         h.write("}")
         h.close()
+        await ctx.channel.send("emoji更新完成")
 
     @commands.Cog.listener()
     async def on_guild_emojis_update(self , guild , emoji_before , emoji_after):

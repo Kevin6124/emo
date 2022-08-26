@@ -24,14 +24,14 @@ class laughdie(cog_extension):
     
     @commands.command()
     async def laughdie_dice(self , ctx , newlimit = 1 ):
-        text = f"目前機率已改為{newlimit}/100"
+        text = f"目前機率已改為{newlimit}/20"
         await ctx.channel.send(text)
         global eventdice_limit
         eventdice_limit = newlimit
 
     @commands.command()
     async def laughdie_limit(self , ctx):
-        text = f"當前機率為{eventdice_limit}/100"
+        text = f"當前機率為{eventdice_limit}/20"
         await ctx.channel.send(text)
 
     @commands.Cog.listener()
